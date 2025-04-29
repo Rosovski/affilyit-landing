@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Header from "@/components/Header/Header";
 import Partner from "@/components/Partner/Partner";
 import ServiceCards from "@/components/ServiceCards/ServiceCards";
@@ -9,7 +9,6 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <Box sx={{ width: "100%" }}>
-      <Typography variant="h3">Home Page</Typography>
       <Header />
       <Partner />
       <ServiceCards />
