@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Box, AppBar, Toolbar, Typography, Button } from "@mui/material";
 import logoImg from "@/assets/logo.png";
-import styles from "./header.module.css";
+import classes from "./header.module.css";
 
 const navLinks = [
   "Services",
@@ -13,7 +13,7 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <Box className={styles.container}>
+    <Box className={classes.container}>
       <AppBar
         position="static"
         sx={{
@@ -22,7 +22,7 @@ export default function Header() {
         }}
       >
         <Toolbar>
-          <Link className={styles.logo} href="/">
+          <Link className={classes.logo} href="/">
             <Image src={logoImg} alt="Affilyit ai" priority />
           </Link>
           <Box
@@ -51,7 +51,7 @@ export default function Header() {
               );
             })}
           </Box>
-          <Box className={styles["button_getStarted"]}>
+          <Box className={classes["button_getStarted"]}>
             <Button
               sx={{
                 display: "block",
