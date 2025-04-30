@@ -1,10 +1,18 @@
-import { Box } from "@mui/material";
-import TestimonialCard from "../Cards/TestimonialCard";
+import { Box, Typography } from "@mui/material";
+import ServiceCard from "../Cards/ServiceCard";
+import classes from "./testimonialcards.module.css";
 
 export default function TestimonialCards() {
   return (
-    <Box>
-      <TestimonialCard />
+    <Box className={classes.container}>
+      <Typography variant="h3">
+        What our clients have to say about us
+      </Typography>
+      <Box className={classes["card-collection"]}>
+        <ServiceCard />
+        <ServiceCard />
+        <ServiceCard />
+      </Box>
     </Box>
   );
 }

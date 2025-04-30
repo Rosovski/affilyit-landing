@@ -1,20 +1,16 @@
 .container {
-  min-height: 150px;
   background-color: #000000;
   padding: 2rem 4rem;
-}
-
-.content {
+  min-height: 400px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
-.links,
-.socialmedias {
+.card-collection {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  color: #808080;
+  gap: 2rem;
 }
