@@ -1,4 +1,6 @@
 import { Box, Typography } from "@mui/material";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import classes from "./footer.module.css";
 
 export default function Footer() {
@@ -14,8 +16,8 @@ export default function Footer() {
           <Typography variant="body2">Cookie</Typography>
         </Box>
         <Box className={classes.socialmedias}>
-          <Typography variant="body1">Twitter</Typography>
-          <Typography variant="body1">Instagram</Typography>
+          <TwitterIcon />
+          <InstagramIcon />
         </Box>
       </Box>
     </Box>
