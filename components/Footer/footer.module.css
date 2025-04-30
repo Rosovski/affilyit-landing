@@ -1,0 +1,20 @@
+.container {
+  min-height: 150px;
+  background-color: #000000;
+  padding: 2rem 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links,
+.socialmedias {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #808080;
+}
