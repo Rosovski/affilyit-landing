@@ -8,12 +8,19 @@ import Typography from "@mui/material/Typography";
 
 export default function ServiceCard() {
   return (
-    <Card sx={{ maxWidth: 345, backgroundColor: "#282c34", color: "white" }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        backgroundColor: "#282c34",
+        color: "white",
+        textAlign: "left",
+      }}
+    >
       <CardMedia
         component="img"
         alt="green iguana"
         height="140"
-        image={require("../../assets/iguana.jpg")}
+        src="/iguana.jpg"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

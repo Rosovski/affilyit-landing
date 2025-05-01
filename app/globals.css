@@ -10,4 +10,5 @@ body {
   background: radial-gradient(#282c34, #282c34);
   text-align: center;
   color: white;
+  overflow: auto;
 }

@@ -4,11 +4,11 @@ import Partner from "@/components/Partner/Partner";
 import ServiceCards from "@/components/ServiceCards/ServiceCards";
 import TestimonialCards from "@/components/TestimonialCards/TestimonialCards";
 import Footer from "@/components/Footer/Footer";
-import styles from "./page.module.css";
+import classes from "./page.module.css";
 
 export default function Home() {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box>
       <Header />
       <Partner />
       <ServiceCards />
