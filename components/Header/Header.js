@@ -5,17 +5,17 @@ import logoImg from "@/assets/logo.png";
 import classes from "./header.module.css";
 
 const navLinks = [
-  "Services",
-  "Testimonials",
-  "Become a Creator",
-  "Partner with Us",
+  { label: "Services", route: "#services" },
+  { label: "Testimonials", route: "#testimonials" },
+  { label: "Become a Creator", route: "#" },
+  { label: "Partner with Us", route: "#" },
 ];
 
 export default function Header() {
   return (
     <Box className={classes.container}>
       <AppBar
-        position="static"
+        position="inherit"
         sx={{
           borderRadius: "12px",
           backgroundColor: "#1e1f2a",
@@ -30,13 +30,13 @@ export default function Header() {
               flexGrow: 1,
               display: "flex",
               justifyContent: "center",
-              gap: 2,
+              gap: 3,
             }}
           >
             {navLinks.map((navLink) => {
               return (
                 <Button
-                  key={navLink}
+                  key={navLink.label}
                   sx={{
                     my: 2,
                     color: "white",
@@ -46,7 +46,7 @@ export default function Header() {
                     },
                   }}
                 >
-                  {navLink}
+                  <Link href={navLink.route}>{navLink.label}</Link>
                 </Button>
               );
             })}
@@ -80,7 +80,11 @@ export default function Header() {
       </Box>
       <Button
         variant="contained"
-        sx={{ display: "block", width: "150px", height: "50px" }}
+        sx={{
+          display: "block",
+          width: "150px",
+          height: "50px",
+        }}
       >
         Discover Now
       </Button>

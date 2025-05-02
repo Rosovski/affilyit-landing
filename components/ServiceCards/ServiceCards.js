@@ -4,7 +4,7 @@ import classes from "./servicecards.module.css";
 
 export default function ServiceCards() {
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} id="services">
       <Typography variant="h3">Services we offer</Typography>
       <Box className={classes["card-collection"]}>
         <ServiceCard />

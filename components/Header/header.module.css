@@ -1,11 +1,12 @@
 .container {
   background-image: linear-gradient(#000435, #000000);
-  padding: 2rem 4rem;
+  padding: 2rem 2rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
+  min-height: 80vh;
 }
 
 .logo {
@@ -30,4 +31,10 @@
 
 .button_getStarted {
   margin-right: 1.5rem;
+}
+
+.container a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
 }

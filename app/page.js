@@ -12,8 +12,10 @@ export default function Home() {
       <Header />
       <Partner />
       <ServiceCards />
-      <TestimonialCards />
-      <Footer />
+      <Box className={classes.footer}>
+        <TestimonialCards />
+        <Footer />
+      </Box>
     </Box>
   );
 }

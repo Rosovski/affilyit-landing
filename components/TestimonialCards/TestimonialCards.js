@@ -4,7 +4,7 @@ import classes from "./testimonialcards.module.css";
 
 export default function TestimonialCards() {
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} id="testimonials">
       <Typography variant="h3">
         What our clients have to say about us
       </Typography>

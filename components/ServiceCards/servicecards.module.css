@@ -1,7 +1,7 @@
 .container {
   background-color: #000000;
   padding: 2rem 4rem;
-  min-height: 400px;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
