@@ -30,6 +30,9 @@
 }
 
 .button_getStarted {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
   margin-right: 1.5rem;
 }
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Box, AppBar, Toolbar, Typography, Button } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import logoImg from "@/assets/logo.png";
 import classes from "./header.module.css";
 
@@ -28,7 +29,7 @@ export default function Header() {
           <Box
             sx={{
               flexGrow: 1,
-              display: "flex",
+              display: { xs: "none", sm: "flex" },
               justifyContent: "center",
               gap: 3,
             }}
@@ -51,10 +52,13 @@ export default function Header() {
               );
             })}
           </Box>
-          <Box className={classes["button_getStarted"]}>
+          <Box
+            className={classes["button_getStarted"]}
+            sx={{ flexGrow: { xs: 1, sm: 1, md: 0 } }}
+          >
             <Button
               sx={{
-                display: "block",
+                display: { xs: "none", sm: "none", md: "block" },
                 color: "white",
                 backgroundColor: "#1976d2",
                 width: "100px",
@@ -62,6 +66,16 @@ export default function Header() {
               }}
             >
               Get Started
+            </Button>
+            <Button
+              sx={{
+                display: { xs: "block", sm: "none" },
+                color: "white",
+                width: "100px",
+                height: "40px",
+              }}
+            >
+              <MenuIcon sx={{ fontSize: "48px" }} />
             </Button>
           </Box>
         </Toolbar>
