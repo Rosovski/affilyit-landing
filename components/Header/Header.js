@@ -1,6 +1,17 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Box, AppBar, Toolbar, Typography, Button } from "@mui/material";
+import {
+  Box,
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Menu,
+  MenuItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logoImg from "@/assets/logo.png";
 import classes from "./header.module.css";
@@ -13,6 +24,16 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
     <Box className={classes.container}>
       <AppBar
@@ -74,9 +95,40 @@ export default function Header() {
                 width: "100px",
                 height: "40px",
               }}
+              onClick={handleOpenNavMenu}
             >
               <MenuIcon sx={{ fontSize: "48px" }} />
             </Button>
+            <Menu
+              sx={{ mt: "45px" }}
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+            >
+              {navLinks.map((navLink) => (
+                <MenuItem
+                  key={navLink.label}
+                  onClick={handleCloseNavMenu}
+                  sx={{ backgroundColor: "#282c34" }}
+                >
+                  <Typography sx={{ textAlign: "center" }}>
+                    <Link href={navLink.route} className={classes["menu-link"]}>
+                      {navLink.label}
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              ))}
+            </Menu>
           </Box>
         </Toolbar>
       </AppBar>
