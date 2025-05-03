@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <Box className={classes.container}>
       <AppBar
-        position="inherit"
+        position="static"
         sx={{
           borderRadius: "12px",
           backgroundColor: "#1e1f2a",

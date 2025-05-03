@@ -14,3 +14,7 @@
   flex-direction: row;
   gap: 2rem;
 }
+
+.itemClass {
+  padding: 1rem;
+}
