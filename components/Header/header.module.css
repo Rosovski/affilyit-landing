@@ -32,7 +32,7 @@
 .button_getStarted {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 1.5rem;
 }
 

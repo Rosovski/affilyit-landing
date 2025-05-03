@@ -13,7 +13,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo-v2.png";
 import classes from "./header.module.css";
 
 const navLinks = [
