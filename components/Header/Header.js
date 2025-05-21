@@ -19,9 +19,9 @@ import classes from "./header.module.css";
 const navLinks = [
   { label: "Services", route: "#" },
   { label: "Testimonials", route: "#" },
-  { label: "Become a Creator", route: "#" },
-  { label: "Partner with Us", route: "#" },
-  { label: "Blog", route: "#" },
+  { label: "Become a Creator", route: "https://apply.affilyit.ai/apply" },
+  { label: "Partner with Us", route: "https://www.affilyit.ai/partner" },
+  { label: "Blog", route: "https://www.affilyit.ai/blog" },
 ];
 
 export default function Header() {
