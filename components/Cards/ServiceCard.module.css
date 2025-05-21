@@ -1,0 +1,18 @@
+.card-container {
+  /* position: relative;
+  background-color: "#1E1E24";
+  color: "#fff";
+  border-radius: 4;
+  height: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden; */
+  padding: 16px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

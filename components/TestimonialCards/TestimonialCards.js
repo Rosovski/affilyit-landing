@@ -6,7 +6,7 @@ import { Box, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import ServiceCard from "../Cards/ServiceCard";
+import TestimonialCard from "../Cards/TestimonialCard";
 
 import classes from "./testimonialcards.module.css";
 
@@ -42,7 +42,6 @@ class ServiceCards extends Component {
           flexDirection: "column",
           justifyContent: "space-between",
         }}
-        id="testimonials"
       >
         <Box sx={{ height: "15vh" }}></Box>
         <Typography variant="h3">
@@ -56,12 +55,12 @@ class ServiceCards extends Component {
           containerClass="first-carousel-container container"
           itemClass={classes.itemClass}
         >
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
         </Carousel>
         <Box sx={{ height: "15vh" }}></Box>
       </Box>

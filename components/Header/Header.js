@@ -17,10 +17,11 @@ import logoImg from "@/assets/logo-v2.png";
 import classes from "./header.module.css";
 
 const navLinks = [
-  { label: "Services", route: "#services" },
-  { label: "Testimonials", route: "#testimonials" },
+  { label: "Services", route: "#" },
+  { label: "Testimonials", route: "#" },
   { label: "Become a Creator", route: "#" },
   { label: "Partner with Us", route: "#" },
+  { label: "Blog", route: "#" },
 ];
 
 export default function Header() {
@@ -120,6 +121,7 @@ export default function Header() {
                   key={navLink.label}
                   onClick={handleCloseNavMenu}
                   sx={{ backgroundColor: "#282c34" }}
+                  className={classes["menu-item"]}
                 >
                   <Typography sx={{ textAlign: "center" }}>
                     <Link href={navLink.route} className={classes["menu-link"]}>

@@ -1,40 +1,53 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { Box, Typography, Button, Card, CardContent } from "@mui/material";
+import classes from "./ServiceCard.module.css";
 
 export default function ServiceCard() {
   return (
     <Card
       sx={{
-        maxWidth: 345,
-        backgroundColor: "#282c34",
-        color: "white",
-        textAlign: "left",
+        position: "relative",
+        backgroundColor: "#1E1E24",
+        color: "#fff",
+        borderRadius: 4,
+        minHeight: 300,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        overflow: "hidden",
       }}
+      className={classes["card-container"]}
     >
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        src="/iguana.jpg"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
+      <CardContent
+        sx={{
+          maxWidth: 400,
+          textAlign: "left",
+        }}
+        className={classes["card-content"]}
+      >
+        <Typography variant="h5" fontWeight="bold" gutterBottom>
+          Service 1
         </Typography>
-        <Typography variant="body2">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography
+          variant="body2"
+          sx={{ color: "rgba(255,255,255,0.8)", mb: 2 }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+          vehicula condimentum nunc, a semper elit luctus id. Duis fringilla
+          enim non neque aliquet.
         </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{
+            display: "block",
+            width: "100px",
+            height: "40px",
+          }}
+        >
+          Discover More
+        </Button>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

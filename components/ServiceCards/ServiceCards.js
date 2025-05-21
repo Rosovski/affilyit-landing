@@ -15,13 +15,13 @@ class ServiceCards extends Component {
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
+        items: 2,
         slidesToSlide: 1,
         partialVisibilityGutter: 40,
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2,
+        items: 1,
         slidesToSlide: 1,
         partialVisibilityGutter: 30,
       },
@@ -42,7 +42,6 @@ class ServiceCards extends Component {
           flexDirection: "column",
           justifyContent: "space-between",
         }}
-        id="services"
       >
         <Box sx={{ height: "15vh" }}></Box>
         <Typography variant="h3">Services we offer</Typography>

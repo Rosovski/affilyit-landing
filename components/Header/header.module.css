@@ -46,3 +46,7 @@
   text-decoration: none;
   color: #ffffff;
 }
+
+.menu-item {
+  padding: 16px;
+}
