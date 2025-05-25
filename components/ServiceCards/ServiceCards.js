@@ -1,16 +1,29 @@
 "use client";
 
 import React, { Component } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ServiceCard from "../Cards/ServiceCard";
 
+import { AffilyitBonuses, AffilyitServices } from "@/utils/constant";
+
 import classes from "./servicecards.module.css";
 
 class ServiceCards extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedService: "services",
+    };
+  }
+
+  handleButtonClick(selectedService) {
+    this.setState({ selectedService });
+  }
+
   render() {
     const responsive = {
       desktop: {
@@ -42,9 +55,39 @@ class ServiceCards extends Component {
           flexDirection: "column",
           justifyContent: "space-between",
         }}
+        id="accelerator-program"
       >
         <Box sx={{ height: "15vh" }}></Box>
-        <Typography variant="h3">Services we offer</Typography>
+        <Typography variant="h3">The Affilyit Accelerator Program</Typography>
+        <Typography variant="body1">
+          your fast track to earning money on TikTok Shop
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 4,
+            mt: 8,
+          }}
+          className={classes["button-container"]}
+        >
+          <Button
+            sx={{ color: "#808080" }}
+            className={classes.button}
+            onClick={() => this.handleButtonClick("services")}
+          >
+            Services
+          </Button>
+          <Button
+            sx={{ color: "#808080" }}
+            className={classes.button}
+            onClick={() => this.handleButtonClick("bonuses")}
+          >
+            Bonuses
+          </Button>
+        </Box>
         <Carousel
           responsive={responsive}
           ssr
@@ -53,12 +96,22 @@ class ServiceCards extends Component {
           containerClass="first-carousel-container container"
           itemClass={classes.itemClass}
         >
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          {this.state.selectedService === "services" &&
+            AffilyitServices.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
+          {this.state.selectedService === "bonuses" &&
+            AffilyitBonuses.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
         </Carousel>
       </Box>
     );

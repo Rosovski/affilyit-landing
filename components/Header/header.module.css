@@ -50,3 +50,11 @@
 .menu-item {
   padding: 16px;
 }
+
+.title {
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}

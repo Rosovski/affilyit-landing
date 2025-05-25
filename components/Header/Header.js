@@ -17,11 +17,11 @@ import logoImg from "@/assets/logo-v2.png";
 import classes from "./header.module.css";
 
 const navLinks = [
-  { label: "Services", route: "#" },
-  { label: "Testimonials", route: "#" },
-  { label: "Become a Creator", route: "https://apply.affilyit.ai/apply" },
-  { label: "Partner with Us", route: "https://www.affilyit.ai/partner" },
-  { label: "Blog", route: "https://www.affilyit.ai/blog" },
+  { label: "About Us", route: "#about-us" },
+  { label: "The Accelerator Program", route: "#accelerator-program" },
+  { label: "Testimonials", route: "#testimonials" },
+  { label: "Become a Creator", route: "https://app.affilyit.ai" },
+  { label: "Partner with Us", route: "#" },
 ];
 
 export default function Header() {
@@ -87,7 +87,7 @@ export default function Header() {
                 height: "40px",
               }}
             >
-              Get Started
+              <Link href="https://app.affilyit.ai">Apply Now</Link>
             </Button>
             <Button
               sx={{
@@ -135,15 +135,14 @@ export default function Header() {
         </Toolbar>
       </AppBar>
       <Box sx={{ width: "60%" }}>
-        <Typography variant="h4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do
-          eiusmod tempor
+        <Typography variant="h3" className={classes.title}>
+          Launch Your Affiliate Career with TikTok Shop
         </Typography>
       </Box>
-      <Box sx={{ width: "40%" }}>
+      <Box sx={{ width: "40%", color: "#808080" }} className={classes.subtitle}>
         <Typography variant="body1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do
-          eiusmod tempor
+          Expert training, direct brand access, and paid opportunities—all in
+          one place.
         </Typography>
       </Box>
       <Button
@@ -154,7 +153,7 @@ export default function Header() {
           height: "50px",
         }}
       >
-        Discover Now
+        <Link href="https://app.affilyit.ai">Apply Now</Link>
       </Button>
     </Box>
   );

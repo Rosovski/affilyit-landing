@@ -14,6 +14,7 @@ export default function TestimonialCard() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        alignItems: "center",
         overflow: "hidden",
         gap: 2,
       }}
@@ -26,10 +27,14 @@ export default function TestimonialCard() {
             height: 64,
             bgcolor: "#ccc",
           }}
-          src="/joe-biden.jpg"
+          // src="/joe-biden.jpg"
           alt="profile picture"
         />
       </Box>
+
+      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+        John Doe
+      </Typography>
 
       <Typography
         variant="body1"

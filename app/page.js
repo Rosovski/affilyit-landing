@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import Partner from "@/components/Partner/Partner";
 import ServiceCards from "@/components/ServiceCards/ServiceCards";
 import TestimonialCards from "@/components/TestimonialCards/TestimonialCards";
+import AboutUs from "@/components/AboutUs/AboutUs";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Partner />
       <ServiceCards />
       <TestimonialCards />
+      <AboutUs />
       <Footer />
     </Box>
   );

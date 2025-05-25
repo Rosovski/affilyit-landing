@@ -1,7 +1,6 @@
 .container {
   background-color: #000000;
   padding: 2rem 4rem;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,4 +16,16 @@
 
 .itemClass {
   padding: 1rem;
+}
+
+.button-container {
+  margin-top: 16px;
+}
+
+.button {
+  color: "#808080";
+}
+
+.button:hover {
+  background-color: white;
 }
