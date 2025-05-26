@@ -5,75 +5,64 @@ import {
   TextField,
   Button,
   InputAdornment,
-  Paper,
 } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
+import EmailIcon from "@mui/icons-material/MailOutline";
+import classes from "./NewsletterSubscription.module.css";
 
 export default function NewsletterSubscription() {
   return (
-    <Paper
-      elevation={3}
-      sx={{
-        backgroundColor: "#16161D",
-        p: 3,
-        borderRadius: 2,
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        gap: 1,
-        maxWidth: "800px",
-        mx: "auto",
-      }}
-    >
+    <Box className={classes.container}>
       <Box sx={{ textAlign: "left" }}>
-        <Typography
-          variant="subtitle1"
-          sx={{ fontWeight: "bold", color: "#fff" }}
-        >
+        <Typography variant="h5" sx={{ fontWeight: "bold", color: "#fff" }}>
           Subscribe to our Newsletter
         </Typography>
-        <Typography variant="body2" sx={{ color: "grey.500" }}>
+        <Typography variant="body1" sx={{ color: "grey.500" }}>
           Neque porro quisquam est qui dolorem ipsum quia dolor.
         </Typography>
       </Box>
+
+      <Box sx={{ width: "20vw" }}></Box>
 
       <Box
         sx={{
           display: "flex",
           gap: 1,
-          mt: 1,
+          flexGrow: 1,
         }}
       >
         <TextField
           fullWidth
           variant="outlined"
           placeholder="Enter Your Email"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <EmailIcon sx={{ color: "grey.500" }} />
-              </InputAdornment>
-            ),
-            sx: {
-              backgroundColor: "#2c2c38",
-              borderRadius: "8px",
-              color: "#fff",
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <EmailIcon sx={{ color: "grey.500" }} />
+                </InputAdornment>
+              ),
+              sx: {
+                backgroundColor: "#2c2c38",
+                borderRadius: "8px",
+                paddingLeft: "8px",
+                color: "#fff",
+              },
             },
           }}
+          className={classes["text-field"]}
         />
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "#1976d2",
-            textTransform: "none",
+            display: "block",
+            width: "120px",
+            height: "40px",
             borderRadius: "8px",
-            px: 3,
           }}
         >
           Subscribe
         </Button>
       </Box>
-    </Paper>
+    </Box>
   );
 }
