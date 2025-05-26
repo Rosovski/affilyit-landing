@@ -10,11 +10,21 @@ export default function Partner() {
   return (
     <Box className={classes.container}>
       <Typography variant="body1">Trusted by our partners</Typography>
-      <Stack direction="row" spacing={2}>
-        <Image src={curedIcon} alt="partner cured" />
-        <Image src={drpawsIcon} alt="partner drpaws" />
-        <Image src={beastbitesIcon} alt="partner beastbites" />
-      </Stack>
+      <Box className={classes.carousel}>
+        <Box className={classes["carousel-track"]}>
+          <Image src={curedIcon} alt="partner cured" />
+          <Image src={drpawsIcon} alt="partner drpaws" />
+          <Image src={beastbitesIcon} alt="partner beastbites" />
+
+          <Image src={curedIcon} alt="partner cured" />
+          <Image src={drpawsIcon} alt="partner drpaws" />
+          <Image src={beastbitesIcon} alt="partner beastbites" />
+
+          <Image src={curedIcon} alt="partner cured" />
+          <Image src={drpawsIcon} alt="partner drpaws" />
+          <Image src={beastbitesIcon} alt="partner beastbites" />
+        </Box>
+      </Box>
     </Box>
   );
 }

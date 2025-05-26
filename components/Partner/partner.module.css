@@ -13,3 +13,34 @@
   object-fit: contain;
   filter: opacity(0.5);
 }
+
+.carousel {
+  overflow: hidden;
+  width: 90%;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-track img {
+  width: 200px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+/* Animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

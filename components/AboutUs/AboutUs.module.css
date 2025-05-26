@@ -1,0 +1,10 @@
+.button {
+  display: block;
+  width: 150px;
+  height: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+}

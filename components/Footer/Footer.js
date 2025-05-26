@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+// import NewsletterSubscription from "./NewsletterSubscription";
 import classes from "./footer.module.css";
 
 export default function Footer() {

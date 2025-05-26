@@ -69,7 +69,6 @@ class ServiceCards extends Component {
             justifyContent: "center",
             alignItems: "center",
             gap: 4,
-            mt: 8,
           }}
           className={classes["button-container"]}
         >

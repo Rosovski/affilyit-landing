@@ -140,7 +140,7 @@ export default function Header() {
         </Typography>
       </Box>
       <Box sx={{ width: "40%", color: "#808080" }} className={classes.subtitle}>
-        <Typography variant="body1">
+        <Typography variant="h6">
           Expert training, direct brand access, and paid opportunities—all in
           one place.
         </Typography>
