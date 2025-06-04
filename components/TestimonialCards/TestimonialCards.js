@@ -8,6 +8,8 @@ import "react-multi-carousel/lib/styles.css";
 
 import TestimonialCard from "../Cards/TestimonialCard";
 
+import { AffilyitTestimonials } from "@/utils/constant";
+
 import classes from "./testimonialcards.module.css";
 
 class ServiceCards extends Component {
@@ -56,12 +58,14 @@ class ServiceCards extends Component {
           containerClass="first-carousel-container container"
           itemClass={classes.itemClass}
         >
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
+          {AffilyitTestimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={index}
+              name={testimonial.name}
+              review={testimonial.review}
+              imgSrc={testimonial.imgSrc}
+            />
+          ))}
         </Carousel>
         <Box sx={{ height: "15vh" }}></Box>
       </Box>

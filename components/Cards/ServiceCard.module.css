@@ -16,3 +16,9 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 200px;
+}

@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import { Box, Typography, Button, Card, CardContent } from "@mui/material";
 import classes from "./ServiceCard.module.css";
 
-export default function ServiceCard({ title, description }) {
+export default function ServiceCard({ title, description, imgSrc }) {
   return (
     <Card
       sx={{
@@ -13,7 +14,7 @@ export default function ServiceCard({ title, description }) {
         minHeight: 300,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-end",
+        // justifyContent: "flex-end",
         overflow: "hidden",
       }}
       className={classes["card-container"]}
@@ -25,6 +26,9 @@ export default function ServiceCard({ title, description }) {
         }}
         className={classes["card-content"]}
       >
+        <div className={classes["image-container"]}>
+          <Image src={imgSrc} alt="" fill objectFit="cover" />
+        </div>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           {title}
         </Typography>

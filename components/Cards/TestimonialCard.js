@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Avatar, Card } from "@mui/material";
 import classes from "./TestimonialCard.module.css";
 
-export default function TestimonialCard() {
+export default function TestimonialCard({ name, review, imgSrc }) {
   return (
     <Card
       sx={{
@@ -27,13 +27,13 @@ export default function TestimonialCard() {
             height: 64,
             bgcolor: "#ccc",
           }}
-          // src="/joe-biden.jpg"
+          src={imgSrc}
           alt="profile picture"
         />
       </Box>
 
       <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-        John Doe
+        {name}
       </Typography>
 
       <Typography
@@ -45,32 +45,8 @@ export default function TestimonialCard() {
           color: "rgba(255,255,255,0.8)",
         }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula
-        condimentum nunc, a semper elit luctus id. Duis fringilla enim non neque
-        aliquet, ut efficitur nunc lacinia. Etiam ornare eget nisi.
+        {review}
       </Typography>
-
-      <Typography
-        variant="body1"
-        sx={{
-          mb: 3,
-          maxWidth: 400,
-          margin: "0 auto",
-          color: "rgba(255,255,255,0.8)",
-        }}
-      >
-        Lorem ipsum dolor sit consectetur adipiscing elit Etiam vehicula
-        condimentum nunc. Duis fringilla enim non neque aliquet, ut efficitur
-        nunc lacinia. Etiam ornare eget nisi fringilla placerat. 🔥
-      </Typography>
-
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-        <img
-          src="/biden-signature.png"
-          alt="Signature"
-          style={{ maxWidth: 150, opacity: 0.6 }}
-        />
-      </Box>
     </Card>
   );
 }

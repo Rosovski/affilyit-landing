@@ -26,6 +26,11 @@
   color: "#808080";
 }
 
+.button-selected {
+  color: "#808080";
+  background-color: white;
+}
+
 .button:hover {
   background-color: white;
 }
