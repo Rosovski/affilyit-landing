@@ -69,12 +69,18 @@
   background-color: #1e1e24;
   border: 2px solid #000;
   border-radius: 8px;
+  height: 800px;
+  overflow: auto;
 }
 
 .text-field input {
   height: 40px;
   border-radius: 8px;
   padding-left: 8px;
+}
+
+.text-field textarea {
+  padding: 8px;
 }
 
 .text-field {
@@ -87,4 +93,8 @@
 
 .required {
   color: red;
+}
+
+.partner-button-container {
+  margin-top: 16px;
 }

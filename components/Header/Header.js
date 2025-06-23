@@ -88,7 +88,6 @@ export default function Header() {
                   }}
                 >
                   <Link href={navLink.route}>{navLink.label}</Link>
-                  {/* {navLink.label} */}
                 </Button>
               );
             })}
