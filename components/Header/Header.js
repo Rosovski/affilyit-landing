@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import logoImg from "@/assets/logo-v2.png";
 import classes from "./header.module.css";
+import PartnerWithUsModal from "./PartnerWithUsModal";
 
 const navLinks = [
   { label: "About Us", route: "#about-us" },
@@ -26,6 +27,7 @@ const navLinks = [
 
 export default function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [openModal, setOpenModal] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -33,6 +35,14 @@ export default function Header() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -68,11 +78,24 @@ export default function Header() {
                       bgcolor: "#282c34",
                     },
                   }}
+                  onClick={() => {
+                    if (navLink.label !== "Partner with Us") {
+                      console.log("I am clicked");
+                      return;
+                    }
+
+                    handleOpenModal();
+                  }}
                 >
                   <Link href={navLink.route}>{navLink.label}</Link>
+                  {/* {navLink.label} */}
                 </Button>
               );
             })}
+            <PartnerWithUsModal
+              open={openModal}
+              handleClose={handleCloseModal}
+            />
           </Box>
           <Box
             className={classes["button_getStarted"]}

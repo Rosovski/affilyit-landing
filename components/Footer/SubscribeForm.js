@@ -13,8 +13,6 @@ export default function SubscribeForm() {
     message: null,
   });
 
-  console.log("Form State:", state);
-
   return (
     <Box
       sx={{
