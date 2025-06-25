@@ -80,7 +80,6 @@ export default function Header() {
                   }}
                   onClick={() => {
                     if (navLink.label !== "Partner with Us") {
-                      console.log("I am clicked");
                       return;
                     }
 

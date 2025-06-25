@@ -3,7 +3,7 @@
 import { useFormState } from "react-dom";
 import { partnerWithUs } from "@/lib/actions";
 
-import { Box, TextField, InputLabel } from "@mui/material";
+import { Box, TextField, InputLabel, Typography } from "@mui/material";
 import classes from "./header.module.css";
 import PartnerWithUsButton from "./PartnerWithUsButton";
 
@@ -121,7 +121,7 @@ export default function PartnerWithUsForm() {
               fullWidth
               variant="outlined"
               className={classes["text-field"]}
-              name="shop-link"
+              name="shop_link"
               id="shop-link"
               slotProps={{
                 input: {
@@ -183,7 +183,7 @@ export default function PartnerWithUsForm() {
               sx={{ color: "white" }}
             >
               Tell us about your brand and why you'd like to partner with
-              Affilyit
+              Affilyit <span className={classes["required"]}>*</span>
             </InputLabel>
             <TextField
               fullWidth
@@ -205,6 +205,9 @@ export default function PartnerWithUsForm() {
             <PartnerWithUsButton />
           </Box>
         </Box>
+        {state.message && (
+          <Typography variant="body1">{state.message}</Typography>
+        )}
       </form>
     </Box>
   );
