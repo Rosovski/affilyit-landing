@@ -9,6 +9,23 @@
   min-height: 80vh;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    min-height: 60vh;
+    padding-bottom: 12rem;
+  }
+
+  .title {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    gap: 3rem;
+  }
+}
+
 .logo {
   margin: 1rem 1.5rem;
   display: flex;
@@ -71,6 +88,14 @@
   border-radius: 8px;
   height: 800px;
   overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-container {
+    width: 90%;
+    min-width: 300px;
+    max-height: 80%;
+  }
 }
 
 .text-field input {

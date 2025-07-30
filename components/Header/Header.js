@@ -140,7 +140,12 @@ export default function Header() {
               {navLinks.map((navLink) => (
                 <MenuItem
                   key={navLink.label}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => {
+                    if (navLink.label === "Partner with Us") {
+                      handleOpenModal();
+                    }
+                    handleCloseNavMenu();
+                  }}
                   sx={{ backgroundColor: "#282c34" }}
                   className={classes["menu-item"]}
                 >
@@ -155,13 +160,19 @@ export default function Header() {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box sx={{ width: "60%" }}>
-        <Typography variant="h3" className={classes.title}>
+      <Box sx={{ width: { xs: "80%", sm: "60%", lg: "50%" } }}>
+        <Typography
+          sx={{ fontSize: { xs: 32, sm: 48 } }}
+          className={classes.title}
+        >
           Launch Your Affiliate Career with TikTok Shop
         </Typography>
       </Box>
-      <Box sx={{ width: "40%", color: "#808080" }} className={classes.subtitle}>
-        <Typography variant="h6">
+      <Box
+        sx={{ width: { xs: "60%", sm: "40%" }, color: "#808080" }}
+        className={classes.subtitle}
+      >
+        <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
           Expert training, direct brand access, and paid opportunities—all in
           one place.
         </Typography>

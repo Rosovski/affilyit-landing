@@ -13,12 +13,21 @@ export default function AboutUs() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        gap: 8,
+        gap: 6,
       }}
       id="about-us"
+      className={classes.container}
     >
-      <Typography variant="h3">About Us</Typography>
-      <Typography variant="body1" sx={{ width: "50%", lineHeight: "2rem" }}>
+      <Typography sx={{ fontSize: { xs: 32, sm: 48 } }}>About Us</Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          width: { xs: "80%", sm: "60%", lg: "50%" },
+          lineHeight: "2rem",
+          fontSize: { xs: 16, sm: 24 },
+          textAlign: "left",
+        }}
+      >
         Affilyit LLC is a premier affiliate marketing agency specializing in
         TikTok Shop. We provide expert training, hands-on support, and a
         streamlined path for both creators and brands to succeed. Our creators
@@ -27,7 +36,15 @@ export default function AboutUs() {
         strategies, and insights needed to become top-performing affiliate
         marketers.
       </Typography>
-      <Typography variant="body1" sx={{ width: "50%", lineHeight: "2rem" }}>
+      <Typography
+        variant="body1"
+        sx={{
+          width: { xs: "80%", sm: "60%", lg: "50%" },
+          lineHeight: "2rem",
+          fontSize: { xs: 16, sm: 24 },
+          textAlign: "left",
+        }}
+      >
         Our partner brands benefit from access to a curated community of
         motivated and trained creators who are supported by expert coaches to
         consistently produce high-converting content. As a designated TikTok
@@ -46,6 +63,7 @@ export default function AboutUs() {
           alignItems: "center",
           gap: 4,
         }}
+        className={classes.buttonContainer}
       >
         <Button variant="contained" className={classes.button}>
           <Link href="https://app.affilyit.ai" className={classes.link}>

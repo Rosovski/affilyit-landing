@@ -66,13 +66,13 @@ class ServiceCards extends Component {
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 2,
+        items: 4,
         slidesToSlide: 1,
         partialVisibilityGutter: 40,
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 1,
+        items: 2,
         slidesToSlide: 1,
         partialVisibilityGutter: 30,
       },
@@ -96,51 +96,57 @@ class ServiceCards extends Component {
         }}
         id="accelerator-program"
       >
-        <Box sx={{ height: "15vh" }}></Box>
-        <Typography variant="h3">The Affilyit Accelerator Program</Typography>
-        <Typography variant="body1">
-          your fast track to earning money on TikTok Shop
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 4,
-          }}
-          className={classes["button-container"]}
-        >
-          <Button
-            sx={{ color: "#808080" }}
-            className={
-              this.state.selectedService === "services"
-                ? classes["button-selected"]
-                : classes.button
-            }
-            onClick={() => this.handleButtonClick("services")}
+        <Box className={classes.header}>
+          <Box sx={{ height: "15vh" }}></Box>
+          <Typography sx={{ fontSize: { xs: 32, sm: 48 } }}>
+            The Affilyit Accelerator Program
+          </Typography>
+          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
+            your fast track to earning money on TikTok Shop
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 4,
+            }}
+            className={classes["button-container"]}
           >
-            Services
-          </Button>
-          <Button
-            sx={{ color: "#808080" }}
-            className={
-              this.state.selectedService === "bonuses"
-                ? classes["button-selected"]
-                : classes.button
-            }
-            onClick={() => this.handleButtonClick("bonuses")}
-          >
-            Bonuses
-          </Button>
+            <Button
+              sx={{ color: "#808080" }}
+              className={
+                this.state.selectedService === "services"
+                  ? classes["button-selected"]
+                  : classes.button
+              }
+              onClick={() => this.handleButtonClick("services")}
+            >
+              Services
+            </Button>
+            <Button
+              sx={{ color: "#808080" }}
+              className={
+                this.state.selectedService === "bonuses"
+                  ? classes["button-selected"]
+                  : classes.button
+              }
+              onClick={() => this.handleButtonClick("bonuses")}
+            >
+              Bonuses
+            </Button>
+          </Box>
         </Box>
         <Carousel
           responsive={responsive}
           ssr
-          centerMode
+          centerMode={false}
           infinite={true}
           containerClass="first-carousel-container container"
           itemClass={classes.itemClass}
+          autoPlay={true}
+          autoPlaySpeed={3000}
         >
           {this.state.selectedService === "services" &&
             AffilyitServices.map((service, index) => (

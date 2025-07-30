@@ -43,6 +43,7 @@ export default function TestimonialCard({ name, review, imgSrc }) {
           maxWidth: 400,
           margin: "0 auto",
           color: "rgba(255,255,255,0.8)",
+          textAlign: "left",
         }}
       >
         {review}

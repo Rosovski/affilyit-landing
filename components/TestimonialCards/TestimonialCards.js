@@ -17,7 +17,7 @@ class ServiceCards extends Component {
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
+        items: 4,
         slidesToSlide: 1,
         partialVisibilityGutter: 40,
       },
@@ -47,16 +47,21 @@ class ServiceCards extends Component {
         id="testimonials"
       >
         <Box sx={{ height: "15vh" }}></Box>
-        <Typography variant="h3">
+        <Typography
+          sx={{ fontSize: { xs: 32, sm: 48 } }}
+          className={classes.title}
+        >
           What our clients have to say about us
         </Typography>
         <Carousel
           responsive={responsive}
           ssr
-          centerMode
+          centerMode={false}
           infinite={true}
           containerClass="first-carousel-container container"
           itemClass={classes.itemClass}
+          autoPlay={true}
+          autoPlaySpeed={3000}
         >
           {AffilyitTestimonials.map((testimonial, index) => (
             <TestimonialCard

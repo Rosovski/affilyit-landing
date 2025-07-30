@@ -8,3 +8,11 @@
   text-decoration: none;
   color: #ffffff;
 }
+
+.buttonContainer {
+  margin-top: 3rem;
+}
+
+.container {
+  padding-top: 2rem;
+}
