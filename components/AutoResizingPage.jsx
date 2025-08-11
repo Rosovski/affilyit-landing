@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, ReactNode } from "react";
+import { useEffect } from "react";
 
 export default function AutoResizingPage({ children }) {
   useEffect(() => {
     const resize = () => {
-      const height = document.documentElement.scrollHeight;
+      const height = window.innerHeight;
       window.parent?.postMessage({ type: "resize-iframe", height }, "*");
     };
 
@@ -20,5 +20,5 @@ export default function AutoResizingPage({ children }) {
     };
   }, []);
 
-  return <div style={{ padding: "2rem" }}>{children}</div>;
+  return <div>{children}</div>;
 }
