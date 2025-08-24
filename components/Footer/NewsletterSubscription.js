@@ -6,7 +6,12 @@ import SubscribeForm from "./SubscribeForm";
 export default function NewsletterSubscription() {
   return (
     <Box className={classes.container}>
-      <Box sx={{ textAlign: "left" }}>
+      <Box
+        sx={{
+          textAlign: "left",
+          display: { xs: "none", sm: "none", md: "block" },
+        }}
+      >
         <Typography variant="h5" sx={{ fontWeight: "bold", color: "#fff" }}>
           Subscribe to our Newsletter
         </Typography>
@@ -15,9 +20,14 @@ export default function NewsletterSubscription() {
         </Typography>
       </Box>
 
-      <Box sx={{ width: "20vw" }}></Box>
+      <Box
+        sx={{
+          width: "20vw",
+          display: { xs: "none", sm: "none", md: "none", lg: "block" },
+        }}
+      ></Box>
 
-      <SubscribeForm />
+      <SubscribeForm sx={{ flexGrow: 1 }} />
     </Box>
   );
 }
